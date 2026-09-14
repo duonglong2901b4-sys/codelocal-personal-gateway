@@ -9,6 +9,5 @@ WORKDIR /app
 COPY --from=build /out/codelocal-personal-gateway /app/codelocal-personal-gateway
 ENV CODELOCAL_GATEWAY_STATE=/data/gateway-state.json
 EXPOSE 8080
-VOLUME ["/data"]
 ENTRYPOINT ["/app/codelocal-personal-gateway"]
 CMD ["--listen",":8080"]
